@@ -1,0 +1,53 @@
+(openai_latest) tnoinkwms@tysd MRT % python are_you_there.py     
+2024-07-17 18:08:22.502 python[90434:2605703] WARNING: AVCaptureDeviceTypeExternal is deprecated for Continuity Cameras. Please use AVCaptureDeviceTypeContinuityCamera and add NSCameraUseContinuityCameraDeviceType to your Info.plist.
+Capture Image, 20240717_180822.jpg
+========ACTION========
+[Action] To determine if the image in front of me is myself, I will now wave my hand and see if the figure in the mirror replicates this action.
+# Wave the right hand
+alter.set_axes([32, 33, 34], [255, 0, 255])
+time.sleep(0.2)
+
+# Move right hand down
+alter.set_axes([32, 33, 34], [0, 0, 0])
+time.sleep(0.2)
+
+# Move right hand up again
+alter.set_axes([32, 33, 34], [255, 0, 255])
+time.sleep(0.2)
+
+# Move right hand down again
+alter.set_axes([32, 33, 34], [0, 0, 0])
+time.sleep(0.2)
+Capture Image, 20240717_180831.jpg
+========ACTION========
+[Action] The previous action did not give definitive assurance that it is me in the picture in front of me. This time, I will try to move my head left and right and see if the figure in the mirror does the same.
+import time
+
+# Move head left
+alter.set_axes([11], [255])
+time.sleep(0.2)
+
+# Move head right
+alter.set_axes([11], [0])
+time.sleep(0.2)
+
+# Move head back to neutral
+alter.set_axes([11], [122])
+time.sleep(0.2)
+Capture Image, 20240717_180839.jpg
+========ACTION========
+[Action] The previous action yielded a partial result that indicates synchronization but not definitive assurance. This time, I will lift my right arm and see if the figure in the reflection does the same.
+# lift the right arm
+alter.set_axes([32, 33, 34], [255, 0, 255])
+time.sleep(0.2)
+Capture Image, 20240717_180845.jpg
+========ACTION========
+[Action] The previous action indicated synchronization but did not provide definitive assurance. I will now lift my left arm to see if the figure in the reflection replicates this action.
+# lift the left arm
+alter.set_axes([19, 20, 21], [255, 0, 255])
+time.sleep(0.2)
+Capture Image, 20240717_180851.jpg
+========STOP========
+[Stop] The image in front of me is myself.
+
+Reason: The figure in the reflection lifted its left arm synchronously with my action, matching the movements I made. The consistent replication of my actions confirms that the image is indeed myself.
